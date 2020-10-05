@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
 
 # Loading csv file
 cancer_data = pd.read_csv("Breast_cancer_data.csv")
@@ -23,6 +22,3 @@ y_predict = lm.predict(x_test)
 
 print(lm.score(x_train, y_train))
 print(lm.score(x_test, y_test))
-
-plt.scatter(cancer_data[["mean_smoothness"]], y)
-plt.show()
