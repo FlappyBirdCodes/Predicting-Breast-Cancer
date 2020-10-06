@@ -11,9 +11,9 @@ y = cancer_data[["diagnosis"]]
 
 # Training logistic regression model
 model = LogisticRegression()
-model.fit(x, y)
+model.fit(x, y.values.ravel())
 
-sample_input = [[12, 13, 124, 998, 0.1243]]
+sample_input = [[13.08, 15.71, 85.63, 520.0, 0.1075]]
 cancer_predictions = model.predict(sample_input)
 
 print(cancer_predictions)
